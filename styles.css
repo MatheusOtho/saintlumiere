@@ -126,7 +126,7 @@ body {
 
 .produtos-section {
     padding: 60px 40px;
-    background-color:   #f5f4f4;
+    background-color:   #dde5f5;
 }
 
 .titulo {
@@ -181,3 +181,87 @@ body {
     color: #112245;
     margin-top: 8px;
 }
+
+.produtos-section, .home-section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease;
+  }
+  
+  .produtos-section.ativo, .home-section.ativo {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+
+  .align-btn-icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .align-btn-icon img {
+    width: 25px;
+    height: 25px;
+    position: relative;
+    top: 3px; /* ou 3px se quiser abaixar mais */
+  }
+
+
+
+
+
+
+
+
+
+  @media (max-width: 768px) {
+    .header-section {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+  
+    .navbar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+  
+    .navbar a {
+      margin: 5px 8px;
+      font-size: 0.9rem;
+    }
+  
+    .home-section {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .home-section .image img {
+      max-width: 90%;
+    }
+  
+    .produtos-grid {
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
+  
+    .btn, .btn2 {
+      padding: 8px 14px;
+      font-size: 0.9rem;
+    }
+  
+    .titulo {
+      font-size: 1.6rem;
+    }
+  
+    .home-section .content h3 {
+      font-size: 1.8rem;
+    }
+  }
+  
